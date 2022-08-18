@@ -16,7 +16,7 @@ function RenderStaffListItem({ staff }) {
 const Staffs = props => {
   const staffs = props.staffs.map(staff => {
     return (
-      <div key={staff.id} className="col-12 col-md-2 my-2">
+      <div key={staff.id} className="col-6 col-md-4 col-lg-2 my-2">
         <RenderStaffListItem staff={staff} />
       </div>
     );

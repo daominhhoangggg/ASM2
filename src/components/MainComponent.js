@@ -24,10 +24,6 @@ class Main extends Component {
       return <StaffDetail staff={this.state.staffs.filter(staff => staff.id === parseInt(match.params.staffId, 10))[0]} />;
     };
 
-    const DepartmentList = () => {
-      return <Departments departments={this.state.departments} />;
-    };
-
     const SalaryList = () => {
       return <Salary staffs={this.state.staffs} />;
     };
@@ -38,7 +34,7 @@ class Main extends Component {
         <Switch>
           <Route exact path="/staffs" component={() => <Staffs staffs={this.state.staffs} onClick={staffId => this.onStaffSelect(staffId)} />} />
           <Route path="/staffs/:staffId" component={StaffWithId} />
-          <Route path="/departments" component={DepartmentList} />
+          <Route path="/departments" component={() => <Departments departments={this.state.departments} />} />
           <Route path="/salary" component={SalaryList} />
           <Redirect to="/staffs" />
         </Switch>

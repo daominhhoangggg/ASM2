@@ -8,10 +8,10 @@ function RenderStaff({ staff }) {
     <div className="col-12 my-2">
       <Card>
         <Row className="no-gutters">
-          <Col md="4">
+          <Col xs="12" md="4" lg="3">
             <CardImg top width="100%" src={staff.image} alt={staff.name} />
           </Col>
-          <Col md="8">
+          <Col xs="12" md="8" lg="9">
             <CardBody>
               <h4>Họ và tên: {staff.name}</h4>
               <p>Ngày sinh: {dateFormat(staff.doB, 'dd/mm/yyyy')}</p>
